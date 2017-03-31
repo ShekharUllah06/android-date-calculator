@@ -5,8 +5,6 @@ Date Calculator is a simple application designed with a user friendly interface 
 ## Deployed on Google Play
 https://play.google.com/store/apps/details?id=com.dev_station.datecalculator
 
-git clone https://github.com/ShekharUllah06/android-date-calculator.git
-
 ## screenshot of this application
 
 ![Alt text](https://lh3.googleusercontent.com/IDPqFxa8TCsAc9vwTFX5b2ogaBH1nKI75HS72ufE7gwGmjpd03wuH2fMBrXLL3bsdwU=h310-rw "Date Calculator")
