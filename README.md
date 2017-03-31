@@ -1,5 +1,10 @@
 # android-date-calculator
 
+Date Calculator is a simple application designed with a user friendly interface to help you calculate difference between two selected dates. Date selection method has been made easier to save your valuable time.
+
+## Deployed on Google Play
+https://play.google.com/store/apps/details?id=com.dev_station.datecalculator
+
 git clone https://github.com/ShekharUllah06/android-date-calculator.git
 
 ## screenshot of this application
