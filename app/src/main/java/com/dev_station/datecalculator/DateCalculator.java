@@ -1,5 +1,8 @@
 package com.dev_station.datecalculator;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 /**
  *
  * @author Shekhar
@@ -85,6 +88,30 @@ public final class DateCalculator {
      * @return DateCalculator
      */
     public static DateCalculator calculateAge(int mDay,int mMonth,int mYear,int tDay,int tMonth,int tYear) {
+        String mDateInString = mDay + " " + mMonth + " " + mYear;
+        String tDateInString = tDay + " " + tMonth + " " + tYear;
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MM yyyy");
+        try {
+            Date mDate = formatter.parse(mDateInString);
+            Date tDate = formatter.parse(tDateInString);
+            long d1 = mDate.getTime();
+            long d2 = tDate.getTime();
+            if(d1>d2){
+                int tempDay=mDay;
+                int tempMonth=mMonth;
+                int tempYear=mYear;
+                mDay=tDay;
+                mMonth=tMonth;
+                mYear=tYear;
+
+                tDay=tempDay;
+                tMonth=tempMonth;
+                tYear=tempYear;
+            }
+        }catch(ParseException e){
+            e.printStackTrace();
+        }
+
         int totalDays=gregorianDays(tYear,tMonth,tDay) - gregorianDays(mYear,mMonth,mDay);
         int mYearDiff = tYear - mYear;
         int mMonDiff = tMonth - mMonth;
@@ -106,8 +133,7 @@ public final class DateCalculator {
             }
 
         }
-        //String age = "Age: " + mYearDiff + " Years " + mMonDiff + " Months " + mDayDiff + " Days";
-        //System.out.println(age);
+
         return new DateCalculator(mYearDiff, mMonDiff, mDayDiff, totalDays);
     }
 
@@ -118,12 +144,5 @@ public final class DateCalculator {
 
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        //DateCalculator dateCaculator=DateCalculator.calculateAge(6, 9, 1988);
-        //System.out.println(dateCaculator.year);
-    }
 
 }
