@@ -1,5 +1,7 @@
 # android-date-calculator
 
+git clone https://github.com/ShekharUllah06/android-date-calculator.git
+
 ## screenshot of this application
 
 ![Alt text](https://lh3.googleusercontent.com/IDPqFxa8TCsAc9vwTFX5b2ogaBH1nKI75HS72ufE7gwGmjpd03wuH2fMBrXLL3bsdwU=h310-rw "Date Calculator")
